@@ -1,18 +1,25 @@
-# Foreign Language Font
+=== Foreign Language Font ===
+Contributors: carlomanf
+Tags: font, fonts, stylesheet, css
+Tested up to: 4.1
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-- **Author:** [Carlo Manf](http://carlomanf.id.au/products/foreign-language-font/)
-- **Current version:** 1.0
-- **Works with:** [WordPress 4.1](http://wordpress.org)
-- **License:** [GPLv2](http://www.opensource.org/licenses/gpl-license.php)
+Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
 
-### Information
+== Description ==
 
 Foreign Language Font allows you to display foreign language text in its own font, by simply entering the link to the font stylesheet and the font name.
 
 You will be able to enter foreign language text into your content and it will display in your selected font, while the font for English text will remain unchanged.
 
-### Changelog
+[Official website](http://carlomanf.id.au/products/foreign-language-font/)
 
-##### v1.0
+== Changelog ==
 
-- Initial release on Bitbucket
+= 1.0 =
+* Initial release on Bitbucket (private repository)
+
+= 1.1 =
+* Initial public release on wordpress.org
