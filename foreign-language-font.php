@@ -5,7 +5,7 @@
  * Author: Carlo Manf
  * Plugin URI: http://carlomanf.id.au/products/foreign-language-font/
  * Author URI: http://carlomanf.id.au/products/foreign-language-font/
- * Version: 1.0
+ * Version: 1.1
  */
 
 //* Load the callback function
