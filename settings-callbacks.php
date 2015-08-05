@@ -1,10 +1,10 @@
 <?php
 /**
- * CM Settings Callbacks simplifies the WordPress Settings API by providing you with a field callback function that you can pass your arguments to.
+ * Settings Callbacks simplifies the WordPress Settings API by providing you with a field callback function that you can pass your arguments to.
  *
  * @author Carlo Manf
- * @link http://carlomanf.id.au/products/cm-settings-callbacks/
- * @version 1.1
+ * @link https://github.com/carlomanf/settings-callbacks
+ * @version 1.2
  */
 
 /**
@@ -21,7 +21,7 @@
  * @param string $prefix      A common prefix for the field names, if a fieldset
  * @param array  $labelset    The names of the labels in the fieldset
  */
-function cm_settings_field_callback( $args ) {
+function sc_settings_field_callback( $args ) {
 	extract( wp_parse_args( $args, array(
 		'setting' => '',
 		'field' => '',
@@ -55,10 +55,10 @@ function cm_settings_field_callback( $args ) {
 		}
 		$did_one = true;
 
-		//* Format for the name and ID attributes
+		// Format for the name and ID attributes
 		$name = sprintf( '%s[%s]', $setting, $field );
 
-		//* Handle checkboxes
+		// Handle checkboxes
 		if ( 'checkbox' === $type ) {
 			$checked = checked( true, isset( $options[ $field ] ), false );
 
@@ -71,14 +71,14 @@ function cm_settings_field_callback( $args ) {
 				printf( '<p class="description">%s</p></fieldset>', $description );
 		}
 		else {
-			//* Add and apply the filters
+			// Add and apply the filters
 			if ( !empty( $filters ) )
 				foreach( $filters as $filter )
 					add_filter( $name, $filter );
 
 			$value = isset( $options[ $field ] ) ? apply_filters( $name, $options[ $field ] ) : '';
 
-			//* Handle single line text fields
+			// Handle single line text fields
 			if ( 'text' === $type ) {
 				if ( !empty( $label ) )
 					printf( '<label for="%s">', $name );
@@ -89,11 +89,11 @@ function cm_settings_field_callback( $args ) {
 					printf( ' %s</label>', $label );
 			}
 
-			//* Handle rich text editors
+			// Handle rich text editors
 			if ( 'editor' === $type )
 				wp_editor( $value, sprintf( '%s_%s', $setting, $field ), array( 'textarea_name' => $name, 'textarea_rows' => $rows ) );
 
-			//* Add the description if there's one
+			// Add the description if there's one
 			if ( !empty( $description ) )
 				printf( '<p class="description">%s</p>', $description );
 		}
